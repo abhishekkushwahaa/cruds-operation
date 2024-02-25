@@ -11,7 +11,7 @@ const SendUser = ({ id }: { id: any }) => {
 
     if (confirmed) {
       try {
-        const res = await sendMail(id, { message: "Hello" });
+        const res = await sendMail(id, "user");
 
         if (res) {
           router.refresh();

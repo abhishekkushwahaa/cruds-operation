@@ -1,26 +1,25 @@
 import DeleteUser from "@/components/deleteUser";
 import SendUser from "@/components/sendUser";
-import sendUser from "@/components/sendUser";
 import { Edit } from "lucide-react";
 import Link from "next/link";
 
 const getUsers = async () => {
   try {
-    const res = await fetch(process.env.API_URL + `/api/user`, {
+    const res = await fetch(process.env.API_URL + `/api/users`, {
       cache: "no-store",
     });
 
     if (!res.ok) {
-      throw new Error("Failed to fetch topics");
+      throw new Error("Failed to fetch users");
     }
 
     return res.json();
   } catch (error) {
-    console.log("Error loading topics: ", error);
+    console.log("Error loading users: ", error);
   }
 };
 
-export default async function TopicsList() {
+export default async function UserLists() {
   const { users } = await getUsers();
 
   return (

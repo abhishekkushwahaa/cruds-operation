@@ -2,7 +2,7 @@
 
 export const sendMail = async (id: string, data: any) => {
   try {
-    const res = await fetch(process.env.API_URL + `/api/user`, {
+    const res = await fetch(process.env.API_URL + `/api/user?${id}`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

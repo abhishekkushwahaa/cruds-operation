@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/navbar";
-import Table from "../components/table";
+import UserLists from "../components/table";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="font-semibold">CRUDS Operations</h1>
       </div>
       <Navbar />
-      <Table />
+      <UserLists />
     </>
   );
 }
