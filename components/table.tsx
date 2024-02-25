@@ -1,10 +1,12 @@
 import DeleteUser from "@/components/deleteUser";
+import SendUser from "@/components/sendUser";
+import sendUser from "@/components/sendUser";
 import { Edit } from "lucide-react";
 import Link from "next/link";
 
 const getUsers = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/users", {
+    const res = await fetch(process.env.API_URL + `/api/user`, {
       cache: "no-store",
     });
 
@@ -102,6 +104,7 @@ export default async function TopicsList() {
                   <Link href={`/updateUser/${u._id}`}>
                     <Edit size={18} />
                   </Link>
+                  <SendUser id={u._id} />
                 </td>
               </tr>
             </tbody>

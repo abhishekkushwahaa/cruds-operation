@@ -9,7 +9,7 @@ const DeleteUser = ({ id }: { id: any }) => {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/users?id=${id}`, {
+      const res = await fetch(process.env.API_URL + `/api/users?id=${id}`, {
         method: "DELETE",
       });
 

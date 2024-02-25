@@ -3,7 +3,7 @@ import { emit } from "process";
 
 const getUserById = async (id: any) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/users/${id}`, {
+    const res = await fetch(process.env.API_URL + `api/users/${id}`, {
       cache: "no-store",
     });
 

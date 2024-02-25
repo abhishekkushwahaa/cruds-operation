@@ -1,4 +1,6 @@
+import { mailOptions } from "./../../../../config/nodemailer";
 import { connect } from "@/app/utils/db";
+import { transporter } from "@/config/nodemailer";
 import User from "@/models/User";
 import { NextRequest, NextResponse } from "next/server";
 
