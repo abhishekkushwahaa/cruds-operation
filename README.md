@@ -1,10 +1,10 @@
-# CRUDS Operations (Create, Read, Update, Delete, Send)
+### CRUDS Operations (Create, Read, Update, Delete, Send)
 
-## Introduction
+#### Introduction
 
 CRUDS Operations is a set of operations that are used to create, read, update, delete and send data. It is a basic set of operations that are used in most of the software applications.
 
-## Operations
+#### Operations
 
 - Create
 - Read
@@ -12,7 +12,7 @@ CRUDS Operations is a set of operations that are used to create, read, update, d
 - Delete
 - Send (Email and SMTP)
 
-## Technologies used
+#### Technologies used
 
 - Next.js & React
 - Tailwind CSS
@@ -21,7 +21,7 @@ CRUDS Operations is a set of operations that are used to create, read, update, d
 - MongoDB
 - Nodemailer (for sending emails)
 
-## How to run the project
+#### How to run the project
 
 1. Clone the repository
 2. Run `npm install` in the root directory
