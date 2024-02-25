@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Abc",
+    "email": "abc@gmail.com",
+    "phone": "01711111111",
+    "hobbies": "Cricket"
+  },
+  {
+    "id": 2,
+    "name": "Xyz",
+    "email": "xyz@gmail.com",
+    "phone": "01722222222",
+    "hobbies": "Football"
+  }
+]
