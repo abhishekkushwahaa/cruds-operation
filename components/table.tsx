@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const getUsers = async () => {
   try {
-    const res = await fetch(process.env.API_URL + `/api/users`, {
+    const res = await fetch(`http://localhost:3000/api/users`, {
       cache: "no-store",
     });
 

@@ -26,7 +26,7 @@ const Form: React.FC<MyComponentProps> = ({ onClose }) => {
 
     try {
       const { name, email, phone, hobbies } = save;
-      const res = await fetch(process.env.API_URL + `/api/users`, {
+      const res = await fetch(`http://localhost:3000/api/users`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

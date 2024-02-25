@@ -1,14 +1,13 @@
 import UpdateUser from "@/components/updateUser";
-import { emit } from "process";
 
 const getUserById = async (id: any) => {
   try {
-    const res = await fetch(process.env.API_URL + `api/users/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/users/${id}`, {
       cache: "no-store",
     });
 
     if (!res.ok) {
-      throw new Error("Failed to fetch topic");
+      throw new Error("Failed to fetch user");
     }
 
     return res.json();
@@ -17,18 +16,27 @@ const getUserById = async (id: any) => {
   }
 };
 
-export default async function EditUder({ params }: { params: any }) {
-  const { id } = params;
-  const { user } = await getUserById(id);
-  const { name, email, phone, hobbies } = user;
+export default async function EditUser({ params }: { params: any }) {
+  try {
+    const { id } = params;
+    const userData = await getUserById(id);
 
-  return (
-    <UpdateUser
-      id={id}
-      name={name}
-      email={email}
-      phone={phone}
-      hobbies={hobbies}
-    />
-  );
+    if (!userData || !userData.user) {
+      throw new Error("User data not found");
+    }
+
+    const { name, email, phone, hobbies } = userData.user;
+
+    return (
+      <UpdateUser
+        id={id}
+        name={name}
+        email={email}
+        phone={phone}
+        hobbies={hobbies}
+      />
+    );
+  } catch (error) {
+    console.error(error);
+  }
 }
